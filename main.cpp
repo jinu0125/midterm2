@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cmath>
 using namespace std;
 
 template <typename K = string, typename V = int>
@@ -25,6 +26,7 @@ public:
         return key;
     }
     void print() {
+
         for(auto it = m.begin(); it != m.end(); it++){
             cout << "key : " << it->first << " " << "value : " << it->second << '\n';
         }
@@ -32,6 +34,21 @@ public:
 
 };
 
+template <typename InputIterator>
+auto standard_deviation(InputIterator first, InputIterator last)
+{
+    int count;
+    // calculate avg
+    while (first != last)
+    {
+        if (*first == m.value)
+        {
+
+        }
+    }
+}
+    // root((IIx - avg)^2 / number of II)
+    //return sum(sqrt())
 
 
 
