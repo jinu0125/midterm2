@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cmath>
+#include <fstream>
 using namespace std;
 
 template <typename K = string, typename V = int>
@@ -53,6 +54,22 @@ auto standard_deviation(InputIterator first, InputIterator last)
 
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
-    return 0;
+    ifstream myFile;
+    string name;
+    int grade;
+    mymap<string , int > m;
+    myFile.open("studentmarks.txt");
+    if (myFile.is_open()) {
+
+        for (int i = 1; myFile.eof(); ++i)
+        {
+            if (i % 2 == 1) {
+                myFile >> m.name;
+            }
+            if (i % 2 == 0) {
+                myFile >> m.grade;
+            }
+
+        }
+    }
 }
